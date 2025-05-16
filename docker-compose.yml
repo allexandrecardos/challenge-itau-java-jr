@@ -1,0 +1,16 @@
+services:
+  challenge-itau-java-jr:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./:/app/"
+  
+  challenge-itau-java-jr-prod:
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "8081:8080"
