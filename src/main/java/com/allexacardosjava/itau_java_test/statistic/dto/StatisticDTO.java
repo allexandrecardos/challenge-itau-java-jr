@@ -1,4 +1,4 @@
-package com.allexacardosjava.itau_java_test.transaction.dto;
+package com.allexacardosjava.itau_java_test.statistic.dto;
 
 import java.util.DoubleSummaryStatistics;
 
@@ -7,14 +7,14 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class TransactionStatsDTO {
+public class StatisticDTO {
   private Long count;
   private Double sum;
   private Double average;
   private Double max;
   private Double min;
 
-  public TransactionStatsDTO(DoubleSummaryStatistics statistics) {
+  public StatisticDTO(DoubleSummaryStatistics statistics) {
     this.count = statistics.getCount();
     this.sum = statistics.getSum();
     this.average = statistics.getAverage();

@@ -1,5 +1,6 @@
 services:
-  challenge-itau-java-jr:
+  dev:
+    container_name: itau-java-dev
     build: 
       context: .
       dockerfile: Dockerfile
@@ -8,7 +9,7 @@ services:
     volumes:
       - "./:/app/"
   
-  challenge-itau-java-jr-prod:
+  prod:
     build: 
       context: .
       dockerfile: Dockerfile.prod

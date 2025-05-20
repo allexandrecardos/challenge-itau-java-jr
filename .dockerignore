@@ -1,3 +1,37 @@
-./docker-composer.yml
-./Dockerfile
-./Dockerfile.prod
+# Arquivos de configuração Docker (se não usados dentro da imagem)
+docker-compose.yml
+Dockerfile
+Dockerfile.prod
+
+# Configuração do Docker Compose
+docker-compose.override.yml
+
+# Diretórios de build locais
+target/
+build/
+
+# Configurações do IDE e arquivos temporários
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+*.class
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Arquivos temporários do Maven ou Gradle
+.mvn/
+.gradle/
+
+# Outros arquivos locais que não precisam estar na imagem
+*.env

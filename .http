@@ -1,0 +1,17 @@
+POST http://localhost:8080/transaction
+Content-Type: application/json
+
+{
+  "value": 50,
+  "datetime": "2025-05-20T10:28:00.789-03:00"
+}
+
+###
+
+GET http://localhost:8080/statistic
+Content-Type: application/json
+
+### 
+
+DELETE  http://localhost:8080/transaction
+Content-Type: application/json

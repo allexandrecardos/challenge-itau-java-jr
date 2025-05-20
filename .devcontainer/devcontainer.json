@@ -1,6 +1,6 @@
 // .devcontainer/devcontainer.json
 {
-  "name": "challenge-itau-java-jr",
+  "name": "itau-java-dev",
   "build": {
     "dockerfile": "Dockerfile"
   },
