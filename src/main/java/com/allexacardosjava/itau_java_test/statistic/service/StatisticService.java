@@ -20,12 +20,10 @@ public class StatisticService {
     List<Transaction> transactions = repository.list();
     OffsetDateTime now = OffsetDateTime.now();
 
-    DoubleSummaryStatistics statistics = transactions
+    return DoubleSummaryStatistics statistics = transactions
         .stream()
         .filter(transaction -> transaction.getDatetime().isAfter(now.minusSeconds(60)))
         .mapToDouble(Transaction::getValue)
         .summaryStatistics();
-
-    return statistics;
   }
 }
