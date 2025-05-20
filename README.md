@@ -1,7 +1,6 @@
 
 # 💼 Itaú Unibanco - Desafio de Programação
 
-
 ## 📄 Instruções do Desafio
 
 Instruções do desafio: [Instruções do Desafio - GitHub](https://github.com/allexandrecardos/challenge-itau-java-jr/tree/main/challenge-instructions)
@@ -12,18 +11,20 @@ Instruções do desafio: [Instruções do Desafio - GitHub](https://github.com/a
 
 ## 📌 Visão Geral
 API REST para processamento de transações financeiras e cálculo de estatísticas em tempo real.  
-Desenvolvida em **Java 21** com **Spring Boot 3.1.10**, armazena dados em memória e atende aos requisitos do desafio proposto.
+Desenvolvida em **Java 21** com **Spring Boot 3.4.5**, armazena dados em memória e atende aos requisitos do desafio proposto.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
 - ✅ **Java 21**  
-- ✅ **Spring Boot 3.1.10**  
-- ✅ **Spring Validation**  
-- ✅ **Lombok**  
-- ✅ **JUnit 5** – Testes automatizados  
+- ✅ **Spring Boot 3.4.5**  
+- ✅ **Spring Validation (3.4.4)**  
+- ✅ **Lombok (1.18.38)**  
+- ✅ **JUnit 5** – Testes automatizados (via `spring-boot-starter-test`)  
 - ✅ **Docker** – Containerização  
+- ✅ **Springdoc OpenAPI (2.8.6)** – Documentação Swagger UI  
+- ✅ **Swagger Annotations (2.2.28)** – Anotações para Swagger/OpenAPI 
 
 ---
 
@@ -36,6 +37,11 @@ Desenvolvida em **Java 21** com **Spring Boot 3.1.10**, armazena dados em memór
 ### Com Docker
 ```bash
 docker compose up -d
+```
+Ou para rodar em ambiente de desenvolvimento ou produção:
+```bash
+docker compose up -d dev
+docker compose up -d prod
 ```
 
 ### Sem Docker
@@ -118,3 +124,5 @@ Retorna estatísticas das transações dos **últimos 60 segundos**.
 
 - ✅ **Dockerização** para facilitar execução e deploy  
 - ✅ **Testes automatizados** com JUnit 5 para garantir qualidade e funcionamento da API  
+- ✅ **Integração contínua (CI)** configurada para executar testes automaticamente  
+- ✅ **Documentação da API via Swagger** disponível para consulta e testes  
