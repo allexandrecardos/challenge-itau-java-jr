@@ -4,14 +4,17 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    image: itau-java-dev:latest
     ports:
       - "8080:8080"
     volumes:
       - "./:/app/"
   
   prod:
+    container_name: itau-java-prod
     build: 
       context: .
       dockerfile: Dockerfile.prod
+    image: itau-java-prod:latest
     ports:
       - "8081:8080"

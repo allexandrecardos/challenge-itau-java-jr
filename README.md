@@ -1,6 +1,13 @@
 
 # 💼 Itaú Unibanco - Desafio de Programação
 
+
+## 📄 Instruções do Desafio
+
+Instruções do desafio: [Instruções do Desafio - GitHub](https://github.com/allexandrecardos/challenge-itau-java-jr/tree/main/challenge-instructions)
+
+---
+
 > **OBS:** Os nomes dos endpoints e campos foram adaptados para inglês para melhor padronização e clareza no desenvolvimento.
 
 ## 📌 Visão Geral

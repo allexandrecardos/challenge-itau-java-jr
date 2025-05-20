@@ -3,9 +3,6 @@ docker-compose.yml
 Dockerfile
 Dockerfile.prod
 
-# Configuração do Docker Compose
-docker-compose.override.yml
-
 # Diretórios de build locais
 target/
 build/
@@ -28,10 +25,3 @@ Thumbs.db
 # Git
 .git
 .gitignore
-
-# Arquivos temporários do Maven ou Gradle
-.mvn/
-.gradle/
-
-# Outros arquivos locais que não precisam estar na imagem
-*.env
