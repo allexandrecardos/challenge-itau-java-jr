@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.time.OffsetDateTime;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
@@ -28,8 +29,7 @@ public class TransactionController {
   private final TransactionRepository repository;
 
   @PostMapping("/transaction")
-  public ResponseEntity<Void> create(@RequestBody @Valid TransactionDTO entity) {
-    // return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).build();
+  public ResponseEntity<Void> create(@Valid @RequestBody TransactionDTO entity) {
     Transaction transaction = new Transaction(entity);
     repository.save(transaction);
     return ResponseEntity.status(HttpStatus.CREATED).build();
@@ -38,9 +38,11 @@ public class TransactionController {
   @GetMapping("/statistic")
   public ResponseEntity<TransactionStatsDTO> listStatistic() {
     List<Transaction> transactions = repository.list();
+    OffsetDateTime now = OffsetDateTime.now();
 
     DoubleSummaryStatistics statistics = transactions
         .stream()
+        .filter(transaction -> transaction.getDatetime().isAfter(now.minusSeconds(60)))
         .mapToDouble(transaction -> transaction.getValue())
         .summaryStatistics();
 
